@@ -1,5 +1,5 @@
 ---
-title: "Nutella Project - Text Analytics | R"
+title: "Nutella Project - R (Text Analytics)"
 date: 2021-03-20
 tags: [R, Text Analytics, business report]
 header:
