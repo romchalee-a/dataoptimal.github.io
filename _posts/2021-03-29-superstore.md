@@ -9,11 +9,9 @@ excerpt: "- Investigated product sales with a database of 9995 data entries and 
 mathjax: "true"
 ---
 
-##Superstore Dataset - Data Visualization | Tableau
-
 **Introduction**
 
-This report was conducted to analyze Superstore’s sales performance across the USA through 2019, the result of this analysis also aimed to help to create an effective marketing campaign to boost store’s sales. The first section of this analysis started with analyzing potential products to be boosted by a marketing campaign and then analyzing which month would be an appropriate period to launch the campaign. Secondly, this report will drive into targeting region analysis. Last but not least, this analysis will discuss which customer segment and product the marketing campaign should be focused on. In conclusion, this report investigated which, when, where, and who the marketing campaign should be taken into the consideration.
+Superstore project was the project from Data Visualization course from my Master degree of Business Analytics at Hult International Business School. The Superstore project was conducted to investigate product sales with a database of 9995 data entries and to design interactive dashboards and a report for the marketing team. This project has conducted with the hypothesis considering the essential factors and information that the marketting team might need for digital marketing and Online Ad campaigns. This report also aimed to provide a top five best-selling products report to indicate specific targeting period, location and targeted customer and to make marketting campaign be more efficient and effective. Therefore this analysis had set the key metrics to evaluate the performance of the well-performance products by evaluating their sales and profits. The structure of this report consisted with analyzing top performning products, period of high demand, targeting region analysis, and customer segment that are worthy for launching marketing campaigns. In conclusion, this report investigated which, when, where, and who for the marketing campaign of each product.
 
 *The interactive dashboard created to support this analysis can be seen via this link:*
 [interactive dashboards](https://public.tableau.com/app/profile/romchalee.aunsakulsaeree/viz/Superstore_analysis_/SuperstoreAnalysis)
