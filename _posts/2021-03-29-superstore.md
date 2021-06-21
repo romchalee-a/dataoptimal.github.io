@@ -1,5 +1,5 @@
 ---
-title: "Superstore Dataset - Data Visualization | Tableau"
+title: "Superstore Dataset - Business Report & Data Visualization | Tableau"
 date: 2021-03-29
 tags: [tableau, data visualization, business report]
 header:
