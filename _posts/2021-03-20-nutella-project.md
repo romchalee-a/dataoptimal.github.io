@@ -9,69 +9,71 @@ excerpt: "Investigated customer’s survey using four NLP frameworks to develop 
 mathjax: "true"
 ---
 
-**Part 1 Business Insight Report**
+#Part 1 Business Insight Report
 
-**Introduction**
+##Introduction
 
 Nutella Project aimed to analyze how people purchase Nutella and to drive actionable recommendations for future marketing approaches. The project initiated by designing a survey about morning routines, how people get to work, and how their perfect days look like. In the end, the survey would ask if the participant would buy Nutella or not. The survey was run across 34 people of diverse backgrounds. For the overview finding of this survey, Nutella indeed is a very likable product, 74% of respondents said that they would buy Nutella.
 
-**Text Analytics Frameworks**
+##Text Analytics Frameworks
 
 This project was applied the R programming language to conducted text analytics along with analyzing word frequency, word relationship, and sentiment analysis. Frameworks applied in this analysis were consist of Correlogram, Sentiment Analysis, N-gram, and Pairwise Correlation.
 
-**1.	Correlogram**
+###1.	Correlogram
+
 Goal: to find keywords for business failure and success
 Insights:
 -	business failure keywords: Hungry, cooking, bar 
 -	business success keyword: cheat, morning 
 
-**2.	Sentiment analysis** 
+###2.	Sentiment analysis
+
 Goal: to find specific keywords of business success with underlining sentiment 
 Insights:
 -	words associated with joy: perfect, beach, sunny 
 -	words associated with sadness: bad, late, feeling
 
-**3.	N-gram**
+###3.	N-gram
 Goal: to find phrases that stand out for the business success group
 Insights: Outstanding phrases
 -	Chocolate, greasy, stuff, hamburgers, fries 
 -	Glazed, banana, whipped 
 
-**4.	Pairwise Correlation/ Correlation Network**
+###4.	Pairwise Correlation/ Correlation Network
 Goal: to find high correlated words for the business success group
 Insights: keywords with high correlation
 -	Cereal milk 
 -	Pizza chocolate  
 
-**Recommendations**
+##Recommendations
 
 Based on the result of the frameworks, they are leading to the final four recommendations for Nutella.
 
-**1.	Refine target audience**
+###1.	Refine target audience
 
 Nutella should refine their target audience not to target people who are more likely to be into cooking at home and like to go to bars but instead target people who are into cheat meals like gym addicts or target people who are busy young adults by recommending Nutella as a fast and easy snack.
 
-**2.	Introducing new product lines and increase exposure on social media**
+###2.	Introducing new product lines and increase exposure on social media**
 
 -	Nutella could expand its product line with more distinct flavor combinations such as Nutella Cereal.  
 -	Increase exposure on social media by leveraging trendy food hashtags #pizzanutella #nutelladay #pizzanutellabanana 
 -	Introducing a different recipe with Nutella for the tiny jars collection (QR code recipe)
 
-**3.	Revamping old campaigns**
+###3.	Revamping old campaigns
 
 Nutella should avoid using words with sad sentiment in any future marketing campaign. Instead, Nutella can adopt joyful keywords in campaigns to revamp and further develop the old campaigns ‘wake up with Nutella campaign’ & ‘morning campaign’ to include a narrative story of a perfect “sunny day” to spend time on the “beach” and having a taste of sweet chocolate and hazelnut.
 
-**4.	Tapping into themed/ seasonal celebrations for greater benefits**
+###4.	Tapping into themed/ seasonal celebrations for greater benefits
 
 With a phrase like ‘chocolate, greasy, hamburgers, and fries’ we recommend a partnership with (any) fast-food chain to cross-sell by including Nutella to their menu. For example, Nutella can partner with McDonald's by adding Nutella to a happy meal or providing a new food pair like fries with Nutella dip. With a phrase like ‘glazed banana whipped’, we recommend launching a Valentine’s Day-themed campaign appealing towards the sentiment of joy and celebration with a bold theme for example Nutella can launch a new packaging design with the tag of ‘Bae-up with Nutella’ and ‘Breakup with Nutella’.
 
 The present for this project can be watched via this link: [Nutella Project Presentation](https://www.youtube.com/watch?v=vQFuouPmwMA)
 
-**Part 2: R Code**
+#Part 2: R Code
 
-**R Programming: Frameworks Analysis**
+##R Programming: Frameworks Analysis
 
-**PREPARE DATA - TOKENIZATION**
+###PREPARE DATA - TOKENIZATION
 ```
 #LOAD ALL LIBRARIES
 library(textreadr)
@@ -148,7 +150,7 @@ tidy_nutella <- og_nutella %>%
 tidy_nutella %>%
   count(word, sort=TRUE)
 ```
-**FRAMEWORK 1: CORRELATION**
+###FRAMEWORK 1: CORRELATION
 ```
 ##############################################
 # FRAMEWORK 1: CORRELATION (corr between success groups and failed groups) 
@@ -205,7 +207,7 @@ corr_compare <- cor.test(data=frequency[frequency$author == "Biz Success",],
          ~proportion + `Biz Failure`)
 print(corr_compare)
 ```
-**FRAMEWORK 2: SENTIMENT ANALYSIS**
+###FRAMEWORK 2: SENTIMENT ANALYSIS
 ```
 ##############################################
 # FRAMEWORK 2: SENTIMENT ANALYSIS
@@ -271,7 +273,7 @@ nrc_joy <- og_nutella_success %>%
 head(nrc_sad,3)
 head(nrc_joy,3)
 ```
-**FRAMEWORK 3: N-GRAM**
+###FRAMEWORK 3: N-GRAM
 ```
 ##############################################
 # FRAMEWORK 3: N-GRAM  
@@ -305,7 +307,7 @@ nutella_trigram <- ggraph(trigram_graph, layout = "fr") +
   theme_void()
 print(nutella_trigram)
 ```
-**FRAMEWORK 4: PAIRWISE CORRELATION/ CORR NETWORK**
+###FRAMEWORK 4: PAIRWISE CORRELATION/ CORR NETWORK
 ```
 #prepare dataset
 my_tidy_df <- df_success %>%
@@ -330,7 +332,7 @@ corr_network <- word_cors %>%
   theme_void()
 print(corr_network)
 ```
-**R PROGRAMMING: SHINY DASHBOARD**
+###R PROGRAMMING: SHINY DASHBOARD
 ```
 ## app.R ##
 library(shiny)
